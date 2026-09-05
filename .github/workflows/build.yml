@@ -25,3 +25,9 @@ jobs:
 
       - name: Build and test
         run: ./mvnw clean verify
+
+       - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: spring-test-jar
+          path: target/*.jar
