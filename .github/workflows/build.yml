@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
   pull_request:
     branches:
       - main
@@ -26,7 +27,7 @@ jobs:
       - name: Build and test
         run: ./mvnw clean verify
 
-       - name: Upload JAR artifact
+      - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
           name: spring-test-jar
